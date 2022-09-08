@@ -1,0 +1,25 @@
+{layout 'master.latte'}
+
+{block title}My amazing blog{/block}
+
+{block content}
+	<p>My name is {$name}</p>
+
+	<hr>
+
+	{* <ul n:if="$users">
+		{foreach $users as $user}
+			<li id="item-{$user->id}">{$user->firstName|capitalize}</li>
+		{/foreach}
+	</ul> *}
+
+	<ul>
+		{foreach $users as $user}
+			<li>{shortify($user->firstName, 3)}</li>
+		{else}
+			<li><em>Sorry, no users in this list</em></li>
+		{/foreach}
+	</ul>
+
+
+{/block}

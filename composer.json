@@ -1,0 +1,15 @@
+{
+    "require": {
+        "latte/latte": "^3.0"
+    },
+    "autoload":{
+        "psr-4":{
+
+            "app\\":"app"
+        },
+
+        "files":[
+            "app/helpers/constants.php"
+        ]
+    }
+}
